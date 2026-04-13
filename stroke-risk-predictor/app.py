@@ -202,9 +202,12 @@ div.stButton > button:active { transform: scale(0.99); }
 # ── Load artefacts ────────────────────────────────────────────────────────────
 @st.cache_resource
 def load_artefacts():
-    model    = joblib.load("knn_model.pkl")
-    scaler   = joblib.load("scaler.pkl")
-    columns  = joblib.load("columns.pkl")
+    # model    = joblib.load("knn_model.pkl")
+    # scaler   = joblib.load("scaler.pkl")
+    # columns  = joblib.load("columns.pkl")
+        model    = joblib.load("stroke-risk-predictor/knn_model.pkl")
+scaler   = joblib.load("stroke-risk-predictor/scaler.pkl")
+columns  = joblib.load("stroke-risk-predictor/columns.pkl")
     return model, scaler, columns
 
 model, scaler, expected_columns = load_artefacts()
